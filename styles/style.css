@@ -1,0 +1,142 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:black;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Press+Start+2P&family=Special+Elite&family=UnifrakturMaguntia&display=swap');
+
+
+.header-wrapper {
+    font-family: 'Special Elite', cursive;
+    font-size: 80px;
+    color: red;
+    text-transform: uppercase;
+}
+
+.weatherforcastbox {
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: #666;
+}
+
+
+.subhead {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    font-style: italic;
+    color: red;
+    margin-bottom: 40px;
+}
+
+.news {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.news p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #444;
+}
+
+.news:hover {
+    transform: scale(1.05);
+}
+
+.news h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #222;
+    line-height: 2;
+}
+
+.news h3 {
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #444;
+}
+
+/* Contenedor  */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tamaño flexible */
+    grid-auto-rows: auto; /* Las filas se ajustan automáticamente al contenido */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    grid-template-areas:
+        "exorcismo exorcismo exorcismo"
+        "mono mono planta"
+        "niños niños defecar"
+}
+
+/* Distribución  */
+.news:nth-child(1) { grid-area: exorcismo; } 
+.news:nth-child(2) { grid-area: mono; } 
+.news:nth-child(3) { grid-area: niños; } 
+.news:nth-child(4) { grid-area: planta; } 
+.news:nth-child(5) { grid-area: defecar; } 
+.news:nth-child(1) { font-family: 'UnifrakturMaguntia', cursive; }
+.news:nth-child(2) { font-family: 'Press Start 2P', cursive; }
+.news:nth-child(3) { font-family: 'Comic Neue', cursive; }
+.news:nth-child(4) { font-family: 'Special Elite', cursive; }
+.news:nth-child(5) { font-family: 'Times New Roman', serif; }
+
+/* Imágenes */
+.news img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-wrapper {
+        font-size: 36px;
+    }
+
+    .subhead {
+        font-size: 20px;
+    }
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+
